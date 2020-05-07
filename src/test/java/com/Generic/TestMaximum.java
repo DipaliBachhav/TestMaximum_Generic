@@ -40,4 +40,25 @@ public class TestMaximum {
         float maxFloat = findMaximum.findMaximumFloat(10.5f, 20.5f, 30.5f);
         Assert.assertEquals(30.5f, maxFloat,0.1);
     }
+
+    @Test
+    public void givenMaximumStringAtFirstPosition_shouldReturnFirstPosition()
+    {
+        String maximumString=findMaximum.findMaximumString("peach", "apple", "banana");
+        Assert.assertEquals("peach",maximumString);
+    }
+
+    @Test
+    public void givenMaximumStringAtSecondPosition_shouldReturnSecondPosition()
+    {
+        String maximumString=findMaximum.findMaximumString("apple","peach","banana");
+        Assert.assertEquals("peach",maximumString);
+    }
+    @Test
+
+    public void givenMaximumStringAtThirdPosition_shouldReturnThirdPosition()
+    {
+        String maximumString=findMaximum.findMaximumString("apple","banana","peach");
+        Assert.assertEquals("peach",maximumString);
+    }
 }

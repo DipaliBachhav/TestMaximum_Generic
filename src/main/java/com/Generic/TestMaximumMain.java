@@ -34,4 +34,18 @@ public class TestMaximumMain {
             return maximumNumber=thirdNumber;
         }
     }
+
+    public String findMaximumString(String string1,String string2,String string3)
+    {
+        String maximumString=string1;
+        if(string2.compareTo(maximumString)>0)
+        {
+            maximumString=string2;
+        }
+        if(string3.compareTo(maximumString)>0)
+        {
+            maximumString=string3;
+        }
+        return maximumString;
+    }
 }
