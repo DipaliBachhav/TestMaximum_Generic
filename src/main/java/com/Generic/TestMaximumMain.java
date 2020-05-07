@@ -1,51 +1,23 @@
 package com.Generic;
 
-public class TestMaximumMain {
-    public  int findMaximumInteger(int firstNumber,int secondNumber,int thirdNumber)
-    {
-        int maximumNumber=0;
-        if(firstNumber>secondNumber && firstNumber>thirdNumber)
-        {
-            return maximumNumber=firstNumber;
-        }
-        else if (secondNumber>firstNumber && secondNumber>thirdNumber)
-        {
-            return maximumNumber=secondNumber;
-        }
-        else
-        {
-            return maximumNumber=thirdNumber;
-        }
-    }
+public class TestMaximumMain < V extends Comparable <V> >
+{
+    V firstValue;
+    V secondValue;
+    V thirdValue;
 
-    public float findMaximumFloat( float firstNumber,float secondNumber,float thirdNumber)
-    {
-        float maximumNumber=0;
-        if(firstNumber>secondNumber && firstNumber>thirdNumber)
-        {
-            return maximumNumber=firstNumber;
-        }
-        else if (secondNumber>firstNumber && secondNumber>thirdNumber)
-        {
-            return maximumNumber=secondNumber;
-        }
-        else
-        {
-            return maximumNumber=thirdNumber;
-        }
-    }
 
-    public String findMaximumString(String string1,String string2,String string3)
+    public V findMaximumValue(V firstValue,V secondValue,V thirdValue)
     {
-        String maximumString=string1;
-        if(string2.compareTo(maximumString)>0)
+        V maximumValue=firstValue;
+        if(secondValue.compareTo(maximumValue)>0)
         {
-            maximumString=string2;
+            maximumValue=secondValue;
         }
-        if(string3.compareTo(maximumString)>0)
-        {
-            maximumString=string3;
-        }
-        return maximumString;
+            if(thirdValue.compareTo(maximumValue)>0)
+            {
+                maximumValue=thirdValue;
+            }
+        return maximumValue;
     }
 }
