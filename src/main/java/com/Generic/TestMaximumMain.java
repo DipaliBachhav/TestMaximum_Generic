@@ -6,6 +6,16 @@ public class TestMaximumMain < V extends Comparable <V> >
     V secondValue;
     V thirdValue;
 
+    public TestMaximumMain()
+    {
+    }
+
+    public TestMaximumMain(V firstValue,V secondValue,V thirdValue)
+    {
+        this.firstValue = firstValue;
+        this.secondValue = secondValue;
+        this.thirdValue = thirdValue;
+    }
 
     public V findMaximumValue(V firstValue,V secondValue,V thirdValue)
     {
@@ -20,4 +30,10 @@ public class TestMaximumMain < V extends Comparable <V> >
             }
         return maximumValue;
     }
+
+    public <V extends Comparable<V>> V findMaximumValue()
+    {
+        return (V) findMaximumValue(firstValue,secondValue,thirdValue);
+    }
+
 }
